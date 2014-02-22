@@ -1,0 +1,58 @@
+<html>
+  <head>
+  <title></title>
+<style></style>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="repeatable.js"></script>
+
+<script type="text/javascript">
+
+  var data = [
+       { name: "Olga", age: 20, email: "aaa@example.com" },
+       { name: "Peter", age: 30, email: "bbb@example.com" },
+       { name: "Ivan", age: 15, email: "ccc@example.com" },
+    ];
+
+  $(function(){
+  
+    var rep = $("ul").repeatable();  
+    
+    $("#populate").click( function() { rep.value = data; } );
+    $("#clear").click( function() { rep.value = []; } );
+    
+    var reph = $("span#hlist").repeatable();
+
+    $("#populate-h").click( function() { reph.value = data; } );
+    $("#clear-h").click( function() { reph.value = []; } );
+  
+  });
+
+</script>
+
+  </head>
+<body>
+
+  <h2>List population demo</h2>
+  <button id="populate">Popuplate repeatable</button>
+  <button id="clear">Set repeatable empty</button>
+  <ul>
+    <li><a href="mailto:{{this.email}}">{{this.name}}</a> <b if="this.age > 18">18+</b> </li> 
+    <li>No data available</li>
+  </ul>
+  <hr>
+  
+  <h2>Horizontal list</h2>
+  
+  <button id="populate-h">Popuplate repeatable</button>
+  <button id="clear-h">Set repeatable empty</button>
+  <p>
+    Friends of yours:
+    <span id="hlist">
+      <span><a href="mailto:{{this.email}}">{{this.name}}</a> {{ $last? '' : ',' }} </span>
+      <em>No friends found!</em>
+    </span> 
+  </p>
+
+</body>
+</html>
