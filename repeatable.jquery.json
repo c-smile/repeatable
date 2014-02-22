@@ -1,0 +1,33 @@
+{
+  "name": "repeatable",
+  "title": "jQuery Repeatable",
+  "description": "jQuery Repeatable 'template-less' plugin for lists and tables population by data arrays.",
+  "keywords": [
+        "repeatable",
+        "population"
+   ],
+   "version": "1.0.0",
+   "author": {
+        "name": "Andrew Fedoniouk @ terrainformatica.com",
+        "url": "http://terrainformatica.com"
+    },
+    "maintainers": [
+        {
+          "name": "Andrew Fedoniouk",
+          "email": "andrew.fedoniouk@gmail.com",
+          "url": "http://stackoverflow.com/users/421163/c-smile"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/c-smile/repeatable/blob/master/LICENSE"
+        }
+    ],  
+    "bugs": "https://github.com/c-smile/repeatable/issues",
+    "homepage": "https://github.com/c-smile/repeatable",
+    "docs": "https://github.com/c-smile/repeatable",
+    "download": "https://github.com/c-smile/repeatable",
+    "dependencies": { "jquery": ">=1.8" },
+    "demo": "http://terrainformatica.com/widgets.js/repeatable/repeatable-test.htm"
+}
