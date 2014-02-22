@@ -1,7 +1,7 @@
 /**
 * @author Andrew Fedoniouk <andrew@terrainformatica.com>
 * @name jQuery repeatable()
-* @license WTFPL (http://sam.zoy.org/wtfpl/)
+* @license MIT
 * @purpose template-less population of repeatables (lists)
 
 If you have this markup:
@@ -49,7 +49,6 @@ You will get this markup populated in the list:
     var vector = null; // data
     var index = 0;     // current index being processed
 
-    //function evalExpr(str) { return eval("(" + str + ")"); }
     function compiledExpr(str) { 
       var expr = compiled[str]; 
       if( !expr )
@@ -123,7 +122,7 @@ You will get this markup populated in the list:
   $.fn.repeatable = function () {
     var el = null;
     this.each(function () { el = repeatable(this); });
-    return el; // returns last matched element!
+    return el; // NOTE: returns last matched element!
   };
 
 })(jQuery);
