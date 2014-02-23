@@ -39,6 +39,9 @@ You will get this markup populated in the list:
 (function ($) {
 
   function repeatable(el) {
+  
+    if(typeof el.getValue == "function")
+      return el; // seems like already set
         
     var $el = $(el);
     var template = $el.find(">*").remove();
